@@ -1,0 +1,11 @@
+<div #content [hidden]="true"><ng-content></ng-content></div>
+
+<div #wrapper class="wrapper" 
+[style.--scroll-speed]="speed + 's'"
+[class.horizontal]="['right', 'left'].includes(direction)">
+    <div class="content">
+        <div #single class="single"
+            [innerHTML]="sanitizer.bypassSecurityTrustHtml(content.innerHTML)" 
+            *ngFor="let i of clones"></div>
+    </div>
+</div>

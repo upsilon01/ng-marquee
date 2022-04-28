@@ -1,0 +1,62 @@
+.wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.horizontal {
+    .content {
+        display: flex;
+    }
+}
+
+.scroll {
+    .single {
+        animation: scroll-vertical var(--scroll-speed) linear infinite;
+    }
+}
+
+.up {
+    .single {
+        animation-direction: reverse !important;
+    }
+}
+
+.down {
+    .single {
+        animation-direction: normal;
+    }
+}
+
+.right {
+    .single {
+        animation-name: scroll-horizontal;
+    }
+}
+
+.left {
+    .single {
+        animation-direction: reverse;
+        animation-name: scroll-horizontal;
+    }
+}
+
+@keyframes scroll-vertical {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}

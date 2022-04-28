@@ -1,0 +1,26 @@
+{
+  "name": "ng-marquee",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upsilon01/ng-marquee"
+  },
+  "author": {
+    "name": "Yissachar Shechter",
+    "email": "upsilon01@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Moshe Gelberg",
+      "email": "gelberg@pm.me"
+    }
+  ],
+  "peerDependencies": {
+    "@angular/common": "^13.3.0",
+    "@angular/core": "^13.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

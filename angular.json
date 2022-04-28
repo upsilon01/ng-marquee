@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ng-marquee": {
+      "projectType": "library",
+      "root": "projects/ng-marquee",
+      "sourceRoot": "projects/ng-marquee/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-marquee/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-marquee/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-marquee/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-marquee/src/test.ts",
+            "tsConfig": "projects/ng-marquee/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-marquee/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ng-marquee"
 }

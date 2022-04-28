@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ng-marquee": [
+        "dist/ng-marquee/ng-marquee",
+        "dist/ng-marquee"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
